@@ -146,8 +146,8 @@
     speakText(quoteText);
 
     // Update mood counter
-    document.getElementById("counter").innerText = 
-      \`\${mood.charAt(0).toUpperCase() + mood.slice(1)}: \${++moodCounter[mood]} times\`;
+    moodCounter[mood]++;
+    document.getElementById("counter").innerText = `${mood.charAt(0).toUpperCase() + mood.slice(1)}: ${moodCounter[mood]} times`;
   }
 
   function speakText(text) {
@@ -158,3 +158,5 @@
 
 </body>
 </html>
+
+  
